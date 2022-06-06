@@ -10,9 +10,9 @@
     <h1> Calculator </h1>
 
     <form onsubmit="cal() ; return false ;">
-        <input type="number" id="fNumber">
-        <input type="" id="sign"> 
-        <input type="number" id="sNumber">
+        <input type="number" id="fNumber" placeholder = " Enter a Number ">
+        <input type="" id="sign" placeholder = " Enter an Operation Sign "> 
+        <input type="number" id="sNumber" placeholder = " Enter a Number ">   
     
       <br><br>
     <button type="submit"> Calculate </button>
@@ -20,7 +20,7 @@
 
     <h1 id="result"></h1>
     <h1 id="nType"></h1>
-    <h1 id="comparison"></h1>
+    <!-- <h1 id="comparison"></h1> -->
 
 
     <script>
@@ -64,29 +64,30 @@
             else{
                 comparison = ` ${sNumber} is greater than ${fNumber}`
             }
-
-            document.querySelector("#comparison").innerHTML = comparison ;
-
-
-            let nType = " " ;
-            //  result = Number(result);
-
-            if ( result < 0 ) {
-                nType = ` ${result} is a Negative Number `
-            }
-             else if ( result > 0) {
-                nType = ` ${result} is a Positive Number `
-            } 
-            else if ( result == 0) {
-                nType = ` Your Result is 0 `
-            }
-            else {
-                nType  = `?`
-            }
-
-            document.querySelector("#nType").innerHTML = nType ;
-
         }
+
+            // document.querySelector("#comparison").innerHTML = comparison ;
+
+
+            // let nType = " " ;
+            // //  result = Number(result);
+
+            // if ( result < 0 ) {
+            //     nType = ` ${result} is a Negative Number `
+            // }
+            //  else if ( result > 0) {
+            //     nType = ` ${result} is a Positive Number `
+            // } 
+            // else if ( result == 0) {
+            //     nType = ` Your Result is 0 `
+            // }
+            // else {
+            //     nType  = `?`
+            // }
+
+            // document.querySelector("#nType").innerHTML = nType ;
+
+       
 
 
 
