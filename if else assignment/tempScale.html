@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <center>
+ 
+
+    <form action="" onsubmit=" temprature() ; return false "> 
+        <label for=""> Enter Temprature Here : </label> <br>
+        <input type="number" id="tNumber" autofocus> <br><br>
+        <button type="submit"> Click </button>
+    </form>
+    <br><br>
+
+    <h1 id="tResult"></h1>
+
+    </center>
+
+    <script>
+        function temprature() {
+
+            let tResult = " " ;
+            let tNumber = document.querySelector("#tNumber").value ;
+            if (Number(tNumber) > 40 ) {
+                tResult = (` It is too hot outside .  `) ;
+            } else if ( Number(tNumber) > 30 ) {
+                tResult = (` The Weather today is Normal .  `) ;
+            } else if (Number(tNumber) > 20) {
+                tResult = (` Today's Weather is cool .`)
+            }else{
+                tResult = (` OMG! Today weather is so Cool .`)
+            }
+            
+            document.querySelector("#tResult").innerHTML = tResult ;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <form  onsubmit="check() ; return false ">
+        <label for=""> Enter a number :  </label>
+
+              <input type =" number "   placeholder = " Number ? "
+
+               autofocus id = "inputNum " >
+               <br><br>
+
+        <button type="submit"> Click </button>
+    </form>
+
+    <h1 id="remainder"></h1>
+
+</center>
+
+<script>
+    function check() {
+        
+    let inputNum = document.querySelector("#inputNum").value ; 
+    let messege = ""
+
+    if ( inputNum + 3 == 10) {
+        messege = ` Your number is divisible by 3 and it's remainder is 0 `
+    } else {
+        messege = ` The remainder is not 0 `
+    }
+    document.querySelector("#remainder").innerHTML = messege ;
+}
+
+</script>
+
+</body>
+</html>

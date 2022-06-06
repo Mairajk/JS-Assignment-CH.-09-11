@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color : lightgreen;" >
+
+    <center>
+
+    <h1 id="gameResult" style="color: purple;"></h1>
+
+</center>
+
+
+    <script>
+        
+let num = 7 ;
+let rText = "" 
+let inputNum = prompt(" Guess a number ") ;
+
+if (inputNum == num ) {
+    rText = "Congrarulations! <br> you guess a right number . "
+} else if (inputNum == ++num) {
+    rText = " Close enough to the correct answer . "
+} else {
+    rText = " Sorry! <br> you guess a Wrong number Please try again ."
+}
+    
+document.querySelector("#gameResult").innerHTML = rText ; 
+    </script>
+    
+</body>
+</html>

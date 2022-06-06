@@ -21,7 +21,7 @@ if (gender === "male") {
     gendermessege = " Good Morning Ma'am "
 }
  else {
-     gendermessege = " Good Morning "
+     gendermessege = ` Good Morning ${gender}`
  }
 
  document.querySelector("#gender").innerHTML = gendermessege ;
@@ -45,15 +45,31 @@ if (gender === "male") {
 
 
 
- let cFuel = prompt(" Enter Your Current Fuel In Liter ") ; 
- let fAlert = "" ;
+//  let cFuel = prompt(" Enter Your Current Fuel In Liter ") ; 
+//  let fAlert = "" ;
 
- if ( cFuel > 0.25) {
-     fAlert = " Please refill the fuel in your car " 
-    //   document.querySelector("#fAlert").style.color = "red" ;
- } else {
-     fAlert = " Your fuel is enough to go  " 
-    //   document.querySelector("#fAlert").style.color = "green" ;
- } ;
+//  if ( cFuel > 0.25) {
+//      fAlert = " Please refill the fuel in your car " 
+//     //   document.querySelector("#fAlert").style.color = "red" ;
+//  } else {
+//      fAlert = " Your fuel is enough to go  " 
+//     //   document.querySelector("#fAlert").style.color = "green" ;
+//  } ;
 
- document.querySelector("#fALert").innerHTML = fAlert ;
+//  document.querySelector("#fALert").innerHTML = fAlert ;
+
+
+
+// let num = 7 ;
+// let rText = "" 
+// let inputNum = prompt(" Guess a number ") ;
+
+// if (inputNum = num ) {
+//     rText = "Congrarulation you guess a right number"
+// } else if (inputNum = ++num) {
+//     rText = " Close enough to the correct answer "
+// } else {
+//     rText = " Sorry ! you are Wrong Please try again "
+// }
+    
+// document.querySelector("#gameResult").innerHTML = rText ; 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator </title>
+</head>
+<body>
+    <h1> Calculator </h1>
+
+    <form onsubmit="cal() ; return false ;">
+        <input type="number" id="fNumber">
+        <input type="" id="sign"> 
+        <input type="number" id="sNumber">
+    
+      <br><br>
+    <button type="submit"> Calculate </button>
+</form>
+
+    <h1 id="result"></h1>
+    <h1 id="nType"></h1>
+    <h1 id="comparison"></h1>
+
+
+    <script>
+        
+        function cal() {
+            let fNumber = document.querySelector("#fNumber").value ;
+            let sNumber = document.querySelector("#sNumber").value ;
+            let sign = document.querySelector("#sign").value ;
+            let result =  " " 
+          // ` ${fNumber} ${sign} ${sNumber} = `  //(${Number(fNumber)} ${Number(sign)} ${Number(sNumber)})  ` ;
+
+          if ( sign == `+` ) {
+              result =  ` ${fNumber} + ${sNumber} =  ${Number(fNumber) + Number(sNumber)} `
+          
+            } else if ( sign == `-` ) {
+                result = ` ${fNumber} - ${sNumber} =  ${Number(fNumber - sNumber)} `
+         
+            } else if ( sign == `*` ) {
+                result = ` ${fNumber} * ${sNumber} =  ${Number(fNumber * sNumber)} `
+          
+            } else if ( sign == `/` ) {
+                result = ` ${fNumber} / ${sNumber} =  ${Number(fNumber / sNumber)} `
+            
+            } else if ( sign == `%` ) {
+                result = ` ${fNumber} % ${sNumber} =  ${Number(fNumber % sNumber)} `
+            
+            } else {
+              result = ` Please Enter Valid Operation Sign .  `
+          }
+            console.log(result);
+            document.querySelector("#result").innerHTML = result ;
+
+
+            let comparison = " "
+            if (sNumber == fNumber) {
+                comparison = `Both Numbers are equal`
+            }
+             else if (fNumber > sNumber ) {
+                comparison = ` ${fNumber} is greater than ${sNumber}` 
+            }
+            else{
+                comparison = ` ${sNumber} is greater than ${fNumber}`
+            }
+
+            document.querySelector("#comparison").innerHTML = comparison ;
+
+
+            let nType = " " ;
+            //  result = Number(result);
+
+            if ( result < 0 ) {
+                nType = ` ${result} is a Negative Number `
+            }
+             else if ( result > 0) {
+                nType = ` ${result} is a Positive Number `
+            } 
+            else if ( result == 0) {
+                nType = ` Your Result is 0 `
+            }
+            else {
+                nType  = `?`
+            }
+
+            document.querySelector("#nType").innerHTML = nType ;
+
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
